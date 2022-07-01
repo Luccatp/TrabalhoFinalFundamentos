@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class ListaDeEleitores {
 
     private File candidatosFile = new File("TxtFiles//eleitores.txt");
-    private int quantidadeDeLinhas = Utilidade.getQuantidadeDeLinhas(candidatosFile) - 1;
+    private int quantidadeDeLinhas = Utilidade.getQuantidadeDeLinhas(candidatosFile);
     private Eleitor[] eleitores;
+    
 
     public ListaDeEleitores() {
         this.eleitores = new Eleitor[quantidadeDeLinhas];
@@ -33,9 +34,28 @@ public class ListaDeEleitores {
         }
     }
 
-            public Eleitor[] getEleitores() {
-                return eleitores;
+    public Eleitor[] getEleitores() {
+        return eleitores;
+    }
+
+    public Eleitor getEleitor(int id) {
+        for(Eleitor eleitor : eleitores) {
+            if(eleitor.getId() == id) {
+                return eleitor;
             }
+        }
+        return new Eleitor();
+    }
+
+    public boolean booleanEleitoresID(int id) {
+        for(Eleitor eleitor : eleitores) {
+            if(eleitor.getId() == id) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     public Eleitor[] getEleitoresOrdenados() {
         int n = eleitores.length;

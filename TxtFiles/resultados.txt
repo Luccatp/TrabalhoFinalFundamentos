@@ -1,0 +1,7 @@
+Data e Hora: 2022-07-01 - 00:18:41
+123,Prometildo Fonseca	, Partido dos Milagres,0
+477,Joao da Obra Pronta	, Partido Construo Tudo,0
+988,Maria das Praias	, Partido do Surfe,0
+702,Enrico Contudo		, Partido dos Contratos,1
+345,Vendolino Nada		, Partido da Visao,1
+000,NULO,NULO,1

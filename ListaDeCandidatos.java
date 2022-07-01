@@ -34,8 +34,30 @@ public class ListaDeCandidatos {
     public Candidato[] getCandidatos() {
         return candidatos;
     }
-    
-    
 
+    public void listarCandidatos() {
+        for(Candidato candidato : candidatos ) {
+            if(candidato != null)
+                System.out.println(candidato);
+        }
+    }
+
+    public boolean booleanCandidatoID(int numeroCandidato) {
+        for(Candidato candidato : candidatos) {
+            if(candidato.getId() == numeroCandidato) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Candidato getCandidato(int numeroCandidato) {
+        for(Candidato candidato : candidatos) {
+            if(candidato.getId() == numeroCandidato) {
+                return candidato;
+            }
+        }
+        return new Candidato();
+    }   
 
 }
